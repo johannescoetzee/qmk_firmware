@@ -19,30 +19,20 @@
 #include <stdlib.h>
 #define LAYER_GROUP_COUNT 2
 
-// GroupRingBuffer *get_group_buffer(void) {
-//     int myryoku_layers[] = {DVK, LAST};
-//     LayerGroup myryoku = { "myryoku", myryoku_layers};
-//
-//     int dvkgaming_layers[] = {GDV, GDN, GDM, LAST};
-//     LayerGroup dvkgaming = { "dvkgaming", dvkgaming_layers};
-//
-//     LayerGroup *layer_groups = calloc((size_t) LAYER_GROUP_COUNT, (size_t) sizeof(LayerGroup));
-//     layer_groups[0] = myryoku;
-//     GroupRingBuffer *group_buffer = malloc(sizeof(GroupRingBuffer));
-//     group_buffer->current = 0;
-//     group_buffer->size = LAYER_GROUP_COUNT;
-//     group_buffer->groups = layer_groups;
-//
-//     return group_buffer;
-// }
+const key_override_t delete_key_override = ko_make_basic(MOD_MASK_SHIFT, KC_BSPC, KC_DEL);
 
-// clang-format off
+// This globally defines all key overrides to be used
+const key_override_t **key_overrides = (const key_override_t *[]){
+    &delete_key_override,
+    NULL // Null terminate the array of overrides!
+};
+
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [DVK] = LAYOUT(
-      _______, KC_SCLN, KC_COMM, KC_DOT , KC_P   , KC_Y    ,                                            KC_F    , KC_G    , KC_C   , KC_R   , KC_L   , _______,
-      _______, MT_LG_A, MT_LA_O, MT_LC_E, MT_LS_U, KC_I    ,                                            KC_D    , MT_RS_H , MT_RC_T, MT_RA_N, MT_RG_S, _______,
-      _______, KC_QUOT, KC_Q   , KC_J   , KC_K   , KC_X    , _______ , _______,      TO(GDV), TO(DVK) , KC_B    , KC_M    , KC_W   , KC_V   , KC_Z   , _______,
-                                 _______, KC_ESC , LT_NV_SP, LT_SM_TB, _______,      _______, LT_SM_BS, LT_NM_EN, LT_FN_DL, _______
+      _______, KC_SCLN, KC_COMM, KC_DOT , KC_P   , KC_Y    ,                                            KC_F    , KC_G   , KC_C   , KC_R   , KC_L   , _______,
+      _______, MT_LG_A, MT_LA_O, MT_LC_E, MT_LS_U, KC_I    ,                                            KC_D    , MT_RS_H, MT_RC_T, MT_RA_N, MT_RG_S, _______,
+      _______, KC_QUOT, KC_Q   , KC_J   , KC_K   , KC_X    , _______ , _______,      TO(GDV), TO(DVK) , KC_B    , KC_M   , KC_W   , KC_V   , KC_Z   , _______,
+                                 _______, KC_ESC , LT_NV_SP, LT_SM_TB, _______,      _______, LT_SM_BS, LT_NM_EN, CW_TOGG, _______
     ),
 
     [NAV] = LAYOUT(
@@ -60,7 +50,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     ),
 
     [SYM] = LAYOUT(
-      _______, KC_QUOT, KC_LT  , KC_GT  , KC_MINS, KC_DQT ,                                         KC_AMPR, KC_AT  , KC_LCBR, KC_RCBR, _______, _______,
+      _______, KC_QUOT, KC_LT  , KC_GT  , KC_MINS, KC_DQT ,                                         KC_AMPR, KC_AT  , KC_LCBR, KC_RCBR, KC_GRV , _______,
       _______, KC_EXLM, KC_MINS, KC_PLUS, KC_EQL , KC_HASH,                                         KC_PIPE, KC_PERC, KC_LPRN, KC_RPRN, KC_QUES, _______,
       _______, KC_CIRC, KC_BSLS, KC_ASTR, KC_SLSH, _______, _______, _______,     _______, _______, KC_TILD, KC_DLR , KC_LBRC, KC_RBRC, _______, _______,
                                  _______, _______, KC_UNDS, KC_TILD, _______,     _______, _______, _______, _______, _______
