@@ -15,8 +15,8 @@
 
 // LAYER TAPS
 #define LT_NV_SP LT(NAV, KC_SPC)
-#define LT_SM_TB LT(SYM, KC_TAB)
+#define LT_RS_TB LT(RSM, KC_TAB)
 
-#define LT_SM_BS LT(SYM, KC_BSPC)
+#define LT_LS_BS LT(LSM, KC_BSPC)
 #define LT_NM_EN LT(NUM, KC_ENT)
 #define LT_FN_DL LT(FUN, KC_DEL)

@@ -29,31 +29,38 @@ const key_override_t **key_overrides = (const key_override_t *[]){
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [DVK] = LAYOUT(
-      _______, KC_SCLN, KC_COMM, KC_DOT , KC_P   , KC_Y    ,                                            KC_F    , KC_G   , KC_C   , KC_R   , KC_L   , _______,
-      _______, MT_LG_A, MT_LA_O, MT_LC_E, MT_LS_U, KC_I    ,                                            KC_D    , MT_RS_H, MT_RC_T, MT_RA_N, MT_RG_S, _______,
-      _______, KC_QUOT, KC_Q   , KC_J   , KC_K   , KC_X    , _______ , _______,      TO(GDV), TO(DVK) , KC_B    , KC_M   , KC_W   , KC_V   , KC_Z   , _______,
-                                 _______, KC_ESC , LT_NV_SP, LT_SM_TB, _______,      _______, LT_SM_BS, LT_NM_EN, CW_TOGG, _______
+      _______, KC_SCLN, KC_COMM, KC_DOT , KC_P   , KC_Y    ,                                            KC_F    , KC_G    , KC_C   , KC_R   , KC_L   , _______,
+      _______, MT_LG_A, MT_LA_O, MT_LC_E, MT_LS_U, KC_I    ,                                            KC_D    , MT_RS_H , MT_RC_T, MT_RA_N, MT_RG_S, _______,
+      _______, KC_QUOT, KC_Q   , KC_J   , KC_K   , KC_X    , _______ , _______,      TO(GDV), TO(DVK) , KC_B    , KC_M    , KC_W   , KC_V   , KC_Z   , _______,
+                                 _______, KC_ESC , LT_NV_SP, LT_RS_TB, _______,      _______, LT_LS_BS, LT_NM_EN, LT_FN_DL, _______
     ),
 
     [NAV] = LAYOUT(
-      _______, _______, _______, _______, _______, _______,                                         _______, _______, _______, _______, _______, _______,
-      _______, KC_LGUI, KC_LALT, KC_LCTL, KC_LSFT, _______,                                         KC_CAPS, KC_LEFT, KC_DOWN, KC_UP  , KC_RGHT, _______,
+      _______, _______, _______, _______, _______, _______,                                         KC_CAPS, _______, _______, _______, _______, _______,
+      _______, KC_LGUI, KC_LALT, KC_LCTL, KC_LSFT, _______,                                         CW_TOGG, KC_LEFT, KC_DOWN, KC_UP  , KC_RGHT, _______,
       _______, _______, _______, _______, _______, _______, _______, _______,     _______, _______, KC_INS , KC_HOME, KC_PGDN, KC_PGUP, KC_END , _______,
                                  _______, _______, _______, _______, _______,     _______, KC_BSPC, KC_ENT , KC_DEL , _______
     ),
 
     [NUM] = LAYOUT(
-      _______, _______, KC_7, KC_8, KC_9, _______,                                         _______, _______, _______, _______, _______, _______,
-      _______, _______, KC_4, KC_5, KC_6, _______,                                         _______, KC_LSFT, KC_LCTL, KC_LALT, KC_LGUI, _______,
+      _______, _______, KC_7, KC_8, KC_9, _______,                                                  _______, _______, _______, _______, _______, _______,
+      _______, KC_0   , KC_4, KC_5, KC_6, _______,                                                  _______, KC_LSFT, KC_LCTL, KC_LALT, KC_LGUI, _______,
       _______, _______, KC_1, KC_2, KC_3, _______, _______, _______, _______,     _______, _______, _______, _______, _______, _______, _______,
-                                 _______, KC_DOT , KC_0   , KC_MINS, _______,     _______, _______, _______, _______, _______
+                                 _______, _______, KC_SPC , KC_TAB , _______,     _______, _______, _______, _______, _______
     ),
 
-    [SYM] = LAYOUT(
-      _______, KC_QUOT, KC_LT  , KC_GT  , KC_MINS, KC_DQT ,                                         KC_AMPR, KC_AT  , KC_LCBR, KC_RCBR, KC_GRV , _______,
-      _______, KC_EXLM, KC_MINS, KC_PLUS, KC_EQL , KC_HASH,                                         KC_PIPE, KC_PERC, KC_LPRN, KC_RPRN, KC_QUES, _______,
-      _______, KC_CIRC, KC_BSLS, KC_ASTR, KC_SLSH, _______, _______, _______,     _______, _______, KC_TILD, KC_DLR , KC_LBRC, KC_RBRC, _______, _______,
+    [LSM] = LAYOUT(
+      _______, KC_QUOT, KC_LT  , KC_GT  , KC_MINS, _______,                                         _______, _______, _______, _______, _______, _______,
+      _______, KC_EXLM, KC_MINS, KC_PLUS, KC_EQL , KC_HASH,                                         _______, KC_LSFT, KC_LCTL, KC_LALT, KC_LGUI, _______,
+      _______, KC_CIRC, KC_BSLS, KC_ASTR, KC_SLSH, _______, _______, _______,     _______, _______, _______, _______, _______, _______, _______, _______,
                                  _______, _______, KC_UNDS, KC_TILD, _______,     _______, _______, _______, _______, _______
+    ),
+
+    [RSM] = LAYOUT(
+      _______, _______, _______, _______, _______, _______,                                         KC_AMPR, KC_AT  , KC_LCBR, KC_RCBR, KC_GRV , _______,
+      _______, KC_LGUI, KC_LALT, KC_LCTL, KC_LSFT, _______,                                         KC_PIPE, KC_PERC, KC_LPRN, KC_RPRN, KC_QUES, _______,
+      _______, _______, _______, _______, _______, _______, _______, _______,     _______, _______, KC_TILD, KC_DLR , KC_LBRC, KC_RBRC, _______, _______,
+                                 _______, _______, _______, _______, _______,     _______, _______, _______, _______, _______
     ),
 
     [FUN] = LAYOUT(

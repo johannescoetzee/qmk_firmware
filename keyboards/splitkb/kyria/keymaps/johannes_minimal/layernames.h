@@ -8,7 +8,8 @@ enum layers {
     GDN,
     NAV,
     NUM,
-    SYM,
+    LSM,
+    RSM,
     FUN,
     LAST
 };
@@ -20,7 +21,8 @@ const char* layer_names[] = {
     [GDM] = "GDM",
     [NAV] = "NAV",
     [NUM] = "NUM",
-    [SYM] = "SYM",
+    [LSM] = "LSM",
+    [RSM] = "RSM",
     [FUN] = "FUN",
     [LAST] = "LAST"
 };
