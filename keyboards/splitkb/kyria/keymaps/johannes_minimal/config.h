@@ -16,6 +16,8 @@
 
 #pragma once
 
+#define USB_VBUS_PIN 19U
+
 #define TAPPING_TERM 200
 
 #define QUICK_TAP_TERM 0
