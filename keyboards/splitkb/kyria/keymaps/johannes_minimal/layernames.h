@@ -1,9 +1,13 @@
 #pragma once
 #include <stdlib.h>
 
+#define GROUP_COUNT 3
+#define GROUP_SIZE 7
+
 enum layers {
     DVK = 0,
     GDV,
+    RGB,
     GDM,
     GDN,
     NAV,
@@ -11,30 +15,18 @@ enum layers {
     LSM,
     RSM,
     FUN,
+    CTL,
     LAST
-};
-
-const char* layer_names[] = {
-    [DVK] = "DVK",
-    [GDV] = "GDV",
-    [GDN] = "GDN",
-    [GDM] = "GDM",
-    [NAV] = "NAV",
-    [NUM] = "NUM",
-    [LSM] = "LSM",
-    [RSM] = "RSM",
-    [FUN] = "FUN",
-    [LAST] = "LAST"
 };
 
 typedef struct layer_group {
     char *name;
-    int *layers;
+    int layers[GROUP_SIZE];
 } LayerGroup;
 
 typedef struct {
     int current;
     int size;
-    LayerGroup *groups;
+    LayerGroup groups[GROUP_COUNT];
 } GroupRingBuffer;
 

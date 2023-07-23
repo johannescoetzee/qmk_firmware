@@ -20,3 +20,7 @@
 #define LT_LS_BS LT(LSM, KC_BSPC)
 #define LT_NM_EN LT(NUM, KC_ENT)
 #define LT_FN_DL LT(FUN, KC_DEL)
+
+#define C_GDN LM(GDN, MOD_LCTL)
+#define S_GDN LM(GDN, MOD_LSFT)
+#define CS_GDN LM(GDN, MOD_LCTL | MOD_LSFT)
