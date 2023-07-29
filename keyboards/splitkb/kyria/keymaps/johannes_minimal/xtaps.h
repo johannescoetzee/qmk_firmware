@@ -23,4 +23,5 @@
 
 #define C_GDN LM(GDN, MOD_LCTL)
 #define S_GDN LM(GDN, MOD_LSFT)
+#define A_GDN LM(GDN, MOD_LALT)
 #define CS_GDN LM(GDN, MOD_LCTL | MOD_LSFT)

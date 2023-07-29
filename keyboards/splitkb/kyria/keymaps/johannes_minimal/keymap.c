@@ -115,7 +115,7 @@ void update_group(uint16_t keycode) {
 
 void reset_group(void) {
     groups.current = 0;
-    set_base_to_group();    
+    set_base_to_group();
 }
 
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
@@ -132,8 +132,8 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
             }
         default:
             return true;
-        
-    }  
+
+    }
 }
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
@@ -189,8 +189,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [RGB] = LAYOUT(
       KC_ESC , KC_Q   , KC_W   , KC_E   , KC_R   , KC_T   ,                                         KC_Y   , KC_U   , KC_I   , KC_O   , KC_P   , _______,
       KC_LSFT, KC_A   , KC_S   , KC_D   , KC_F   , KC_G   ,                                         KC_H   , KC_J   , KC_K   , KC_L   , KC_SCLN, _______,
-      KC_LCTL, KC_Z   , KC_X   , KC_C   , KC_V   , KC_B   , _______, MO(CTL),     _______, _______, KC_N   , KC_M   , KC_COMM, KC_DOT , KC_SLSH, _______,
-                                 _______, C_GDN  , MO(GDN), S_GDN  , CS_GDN ,     _______, _______, _______, _______, _______
+      KC_LCTL, KC_Z   , KC_X   , KC_C   , KC_V   , KC_B   , A_GDN  , MO(CTL),     _______, _______, KC_N   , KC_M   , KC_COMM, KC_DOT , KC_SLSH, _______,
+                                 _______, S_GDN  , MO(GDN), C_GDN  , CS_GDN ,     _______, _______, _______, _______, _______
     ),
 
     [GDM] = LAYOUT(
@@ -203,7 +203,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [GDN] = LAYOUT(
       KC_ESC , KC_1   , KC_2   , KC_3   , KC_4   , KC_9   ,                                          _______, KC_F9  , KC_F10 , KC_F11 , KC_F12 , KC_GRV ,
       KC_LSFT, KC_5   , KC_6   , KC_7   , KC_8   , KC_0   ,                                          _______, KC_F5  , KC_F6  , KC_F7  , KC_F8  , KC_RSFT,
-      KC_LCTL, KC_F13 , KC_F14 , KC_F15 , KC_F16 , KC_F17 , _______, MO(CTL),      _______, _______, _______, KC_F1  , KC_F2  , KC_F3  , KC_F4  , KC_RCTL,
+      KC_LCTL, KC_F19 , KC_F20 , KC_F21 , KC_F22 , KC_F23 , KC_F24 , MO(CTL),      _______, _______, _______, KC_F1  , KC_F2  , KC_F3  , KC_F4  , KC_RCTL,
                                  _______, _______, _______, _______, _______,      _______, _______, _______, _______, _______
     ),
 
