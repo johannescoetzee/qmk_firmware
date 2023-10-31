@@ -183,7 +183,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
       KC_ESC , KC_SCLN, KC_COMM, KC_DOT , KC_P   , KC_Y  ,                                          KC_F   , KC_G   , KC_C   , KC_R   , KC_L   , KC_GRV ,
       KC_LSFT, KC_A   , KC_O   , KC_E   , KC_U   , KC_I  ,                                          KC_D   , KC_H   , KC_T   , KC_N   , KC_S   , KC_RSFT,
       KC_LCTL, KC_QUOT, KC_Q   , KC_J   , KC_K   , KC_X  , _______, MO(CTL),      _______, _______, KC_B   , KC_M   , KC_W   , KC_V   , KC_Z   , KC_RCTL,
-                                 _______, MO(GDM), KC_SPC, MO(GDN), KC_TAB ,      _______, KC_LALT, _______, _______, _______
+                                 _______, MO(GDM), KC_SPC, MO(GDN), KC_TAB ,      KC_LALT, KC_BSPC, KC_ENT , KC_DEL , _______
     ),
 
     [RGB] = LAYOUT(
