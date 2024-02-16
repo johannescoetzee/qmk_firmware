@@ -1,13 +1,14 @@
 #pragma once
 #include <stdlib.h>
 
-#define GROUP_COUNT 3
+#define GROUP_COUNT 4
 #define GROUP_SIZE 7
 
 enum layers {
     DVK = 0,
     GDV,
     RGB,
+    SC2,
     GDM,
     GDN,
     NAV,
