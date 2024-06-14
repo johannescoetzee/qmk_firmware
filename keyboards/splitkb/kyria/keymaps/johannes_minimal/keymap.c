@@ -48,6 +48,7 @@ const char* layer_names[] = {
     [CTL] = "Control",
     [RGB] = "RTS Base",
     [SC2] = "SC2",
+    [DRS] = "Diaeresis",
     [LAST] = "LAST"
 };
 
@@ -57,7 +58,7 @@ GroupRingBuffer groups = {
     /* groups */ {
         {
             "Base",
-            { DVK, NAV, NUM, LSM, RSM, FUN, CTL }
+            { DVK, NAV, NUM, LSM, RSM, FUN, DRS, CTL }
         },
         {
             "General Gaming",
@@ -145,7 +146,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
       _______, KC_SCLN, KC_COMM, KC_DOT , KC_P   , KC_Y    ,                                            KC_F    , KC_G    , KC_C   , KC_R   , KC_L   , _______,
       _______, MT_LG_A, MT_LA_O, MT_LC_E, MT_LS_U, KC_I    ,                                            KC_D    , MT_RS_H , MT_RC_T, MT_RA_N, MT_RG_S, _______,
       _______, KC_QUOT, KC_Q   , KC_J   , KC_K   , KC_X    , _______ , _______,      MO(CTL), _______, KC_B    , KC_M    , KC_W   , KC_V   , KC_Z   , _______,
-                                 _______, KC_ESC , LT_NV_SP, LT_RS_TB, _______,      _______, LT_LS_BS, LT_NM_EN, LT_FN_DL, _______
+                                 _______, KC_ESC , LT_NV_SP, LT_RS_TB, MO(DRS),      MO(DRS), LT_LS_BS, LT_NM_EN, LT_FN_DL, _______
     ),
 
     [NAV] = LAYOUT(
@@ -157,7 +158,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
     [NUM] = LAYOUT(
       _______, _______, KC_7, KC_8, KC_9, _______,                                                  _______, _______, _______, _______, _______, _______,
-     _______, KC_0   , KC_4, KC_5, KC_6, _______,                                                  _______, KC_LSFT, KC_LCTL, KC_LALT, KC_LGUI, _______,
+     _______, KC_0   , KC_4, KC_5, KC_6, _______,                                                   _______, KC_LSFT, KC_LCTL, KC_LALT, KC_LGUI, _______,
       _______, _______, KC_1, KC_2, KC_3, _______, _______, _______, _______,     MO(CTL), _______, _______, _______, _______, _______, _______,
                                  _______, _______, KC_SPC , KC_TAB , _______,     _______, _______, _______, _______, _______
     ),
